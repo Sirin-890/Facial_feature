@@ -31,3 +31,5 @@ def process_directory(directory_path, csv_path):
                 except Exception as e:
                     logger.error(f"Failed to process {filename}: {e}")
 if __name__ == "__main__":
+    process_directory("","")
+    
