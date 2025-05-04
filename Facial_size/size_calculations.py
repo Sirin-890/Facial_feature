@@ -56,7 +56,7 @@ def nose_lips_chin(img_path):
     return nose_lips,lips_chin,golden_ratio
 def forehead(img_path):
     li=[]
-    out_path=""
+    
     _,_,w,h=face_detection_crop(img_path,img_path)
     img_temp=cv2.imread(img_path)
     img= cv2.cvtColor(img_temp,cv2.COLOR_BGR2RGB)
