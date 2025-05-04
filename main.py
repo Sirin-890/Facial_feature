@@ -27,6 +27,7 @@ def process_directory(directory_path, csv_path):
                     nose_lip, lip_chin, golden = nose_lips_chin(img_path)
                     forehead_size = forehead(img_path)
                     writer.writerow([filename, re_w, re_h, le_w, le_h, forehead_size, nose_lip, lip_chin, golden])
-                    print(f"Processed {filename}")
+                    logger.debug(f"Processed {filename}")
                 except Exception as e:
-                    print(f"Failed to process {filename}: {e}")
+                    logger.error(f"Failed to process {filename}: {e}")
+if __name__ == "__main__":
